@@ -1,0 +1,19 @@
+import java.util.Scanner;
+public class CircleCalculations {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter radius of the circle: ");
+        float radius = sc.nextFloat();
+        float area = calculateArea(radius);
+        float circumference = calculateCircumference(radius);
+        System.out.println("Area of Circle = " + area);
+        System.out.println("Circumference of Circle = " + circumference);
+        sc.close();
+    }
+    public static float calculateArea(float r) {
+        return float(Math.PI * r * r);
+    }
+    public static float calculateCircumference(float r) {
+        return float(2 * Math.PI * r);
+    }
+}
