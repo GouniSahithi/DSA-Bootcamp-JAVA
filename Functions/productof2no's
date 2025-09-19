@@ -1,15 +1,17 @@
 import java.util.Scanner;
-public class Productnos{
-  public static void main(String args[]){
-    Scanner sc=new Scanner(System.in);
-    System.out.println("enter 1st no:");
-    int a=sc.nextInt();
-    System.out.println("enter 2nd no:");
-    int b=sc.nextInt();
-    int productNumbers(int a,int b);
-    sc.close();
+public class Productnos {
+    public static void main(String args[]) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter 1st number:");
+        int a = sc.nextInt();
+        System.out.println("Enter 2nd number:");
+        int b = sc.nextInt();
+        int result = productNumbers(a, b);  // call method
+        System.out.println("The product is: " + result);
+        sc.close();
     }
-  public static void productNumbers(int a,int b){
-    product=a*b;
-    result product;
-}}
+    public static int productNumbers(int a, int b) {
+        int product = a * b;
+        return product;
+    }
+}
