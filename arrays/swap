@@ -1,0 +1,16 @@
+import java.util.*;
+public class Main{
+    public static void main(String args[]){
+        int[] arr={0,1,2,3,4,6};
+        System.out.println("before swapping:"+Arrays.toString(arr));
+        swap(arr,0,5);
+        System.out.println("after swapping:"+Arrays.toString(arr));
+    }
+    
+    public static void swap(int[] arr,int index0,int index5){
+        int temp=arr[index0];
+        arr[index0]=arr[index5];
+        arr[index5]=temp;
+       
+    }
+}
