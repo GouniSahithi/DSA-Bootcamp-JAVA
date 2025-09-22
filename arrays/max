@@ -1,0 +1,18 @@
+import java.util.*;
+
+public class Main {
+    public static void main(String args[]) {
+        int[] arr = {0, 1, 2, 3, 4, 6};
+        Max(arr); 
+    }
+
+    static void Max(int[] arr) {
+        int Maxval = arr[0];
+        for (int i = 1; i < arr.length; i++) {
+            if (arr[i] > Maxval) {
+                Maxval = arr[i];
+            }
+        }
+        System.out.println("Maximum value: " + Maxval);  
+    }
+}
