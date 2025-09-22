@@ -1,0 +1,12 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int[] arr=new int[3];
+		arr[0]=23;
+		arr[1]=24;
+		arr[2]=25;
+		System.out.println(arr[1]);
+	}
+}
