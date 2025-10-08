@@ -1,0 +1,28 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        int[][] arr = {
+            {22, 45, 67},
+            {12, 34, 56, 78, 89},
+            {35, 65, 87, 90, 86, 89}
+        };
+        int target = 89;
+        int[] res = search(arr, target);
+        System.out.println(Arrays.toString(res));
+    }
+
+    static int[] search(int[][] arr, int target) {
+        if (arr.length == 0) {
+            return new int[] {-1, -1};
+        }
+        for (int r = 0; r < arr.length; r++) {
+            for (int c = 0; c < arr[r].length; c++) {
+                if (arr[r][c] == target) {
+                    return new int[] {r, c};
+                }
+            }
+        }
+        return new int[] {-1, -1};
+    }
+}
