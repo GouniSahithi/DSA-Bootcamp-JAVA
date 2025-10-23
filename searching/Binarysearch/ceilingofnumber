@@ -1,0 +1,30 @@
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+        int[] arr={2,4,5,6,7,11,14,17,19};
+        int tar=10;
+        int ans=ceiling(arr,tar);
+        System.out.println("ceiling of " +tar+ " is at index:"+ans+"(value"+(ans!=-1?arr[ans]:"n/a")+ ")");
+    }
+    static int ceiling(int[] arr,int tar){
+        if (tar > arr[arr.length - 1]) {
+            return -1; 
+        }
+        int start=0;
+        int end=arr.length-1;
+        while(start<=end){
+            int mid=start+(end-start)/2;
+            if(tar<arr[mid]){
+                end=mid-1;
+            }
+            else if(tar>arr[mid]){
+                start=mid+1;
+            }
+            else{
+                return mid;
+            }
+        }
+        return start;
+        
+    }
+}
