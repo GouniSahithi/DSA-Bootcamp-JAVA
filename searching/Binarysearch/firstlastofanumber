@@ -1,0 +1,49 @@
+import java.util.*;
+
+class Main {
+    public static void main(String[] args) {
+        int[] arr = {2, 3, 4, 7, 7, 7, 8, 9};
+        int tar = 7;
+        int[] ans = firstLast(arr, tar);
+        System.out.println("First index: " + ans[0]);
+        System.out.println("Last index: " + ans[1]);
+    }
+
+    public static int[] firstLast(int[] arr, int tar) {
+        int first = findFirst(arr, tar);
+        int last = findLast(arr, tar);
+        return new int[]{first, last};
+    }
+
+    public static int findFirst(int[] arr, int tar) {
+        int low = 0, high = arr.length - 1, result = -1;
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            if (arr[mid] == tar) {
+                result = mid;
+                high = mid - 1; // search left
+            } else if (arr[mid] < tar) {
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+        return result;
+    }
+
+    public static int findLast(int[] arr, int tar) {
+        int low = 0, high = arr.length - 1, result = -1;
+        while (low <= high) {
+            int mid = low + (high - low) / 2;
+            if (arr[mid] == tar) {
+                result = mid;
+                low = mid + 1; // search right
+            } else if (arr[mid] < tar) {
+                low = mid + 1;
+            } else {
+                high = mid - 1;
+            }
+        }
+        return result;
+    }
+}
