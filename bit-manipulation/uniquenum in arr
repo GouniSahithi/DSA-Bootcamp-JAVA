@@ -1,0 +1,17 @@
+class Main {
+    public static void main(String[] args) {
+        int[] arr={1,2,3,4,3,2,1};
+        System.out.println("unique number in an array"+ ans(arr));
+    }
+    public static int ans(int[] arr){
+        int unique=0;
+        for(int n:arr){
+            unique^=n;
+        }
+        return unique;
+    }
+}
+
+
+o/p:
+unique number in an array 4 
