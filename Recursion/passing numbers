@@ -1,0 +1,19 @@
+class Main{
+    public static void main(String[] args){
+        passing(5);
+    }
+    static void passing(int n){
+        if(n==0){
+            return;
+        }
+        System.out.println(n);
+        passing(--n);
+    }
+}
+
+o/p:
+5
+4
+3
+2
+1
