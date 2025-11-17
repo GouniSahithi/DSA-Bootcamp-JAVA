@@ -1,0 +1,24 @@
+class Main{
+    public static void main(String[] args){
+       int[] arr={1,3,2,4};
+       System.out.println(linearfind(arr,3,0));
+    }
+    static int linearfind(int[] arr,int target,int index){
+        if(index==arr.length){
+            return -1;
+        }
+        if(arr[index]==target){
+            return index;
+        }
+        else{
+            return linearfind(arr,target,index+1);
+        }
+    }
+   
+    
+}
+
+
+
+o/p:
+1
