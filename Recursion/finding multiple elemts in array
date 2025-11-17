@@ -1,0 +1,24 @@
+import java.util.*;
+class Main{
+    public static void main(String[] args){
+       int[] arr={1,3,2,4,4};
+       multilinearfind(arr,4,0);
+       System.out.println(list);
+    }
+    static ArrayList<Integer> list=new ArrayList<>();
+    static int multilinearfind(int[] arr,int target,int index){
+        if(index==arr.length){
+            return -1;
+        }
+       if(arr[index]==target){
+           list.add(index);
+       }
+       return multilinearfind(arr,target,index+1);
+    }
+   
+    
+}
+
+
+o/p:
+[3,4]
