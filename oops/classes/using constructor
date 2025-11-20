@@ -1,0 +1,28 @@
+class Main{
+    public static void main(String[] args){
+        Student kunal=new Student(1,"kunal kushwa",65.2f);
+        Student rahul=new Student(2,"rahul mishra",55.9f);
+        System.out.println(rahul.rollno);
+        System.out.println(rahul.name);
+        System.out.println(rahul.marks);
+       
+    }
+    
+}
+class Student{
+    int rollno;
+    String name;
+    float marks;
+    
+    Student(int rollno,String name,float marks){
+        this.rollno=rollno;
+        this.name=name;
+        this.marks=marks;
+    }
+}
+
+
+o/p:
+2
+rahul mishra
+55.9
