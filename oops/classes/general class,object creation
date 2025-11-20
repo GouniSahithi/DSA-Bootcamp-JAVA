@@ -1,0 +1,23 @@
+class Main{
+    public static void main(String[] args){
+        Student kunal=new Student();
+        kunal.rollno=1;
+        kunal.name="kunal kushwa";
+        kunal.marks=99.2f;
+        System.out.println(kunal.rollno);
+        System.out.println(kunal.name);
+        System.out.println(kunal.marks);
+        
+    }
+    
+}
+class Student{
+    int rollno;
+    String name;
+    float marks;
+}
+
+o/p:
+1
+kunal kushwa
+99.2
