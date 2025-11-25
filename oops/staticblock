@@ -1,0 +1,25 @@
+class Main{
+    static int a=4;
+    static int b;
+    //static block will only execute once which after obj1 is created
+    static{
+    System.out.println("hiii this is static block");
+    b=a*5;
+    }
+    public static void main(String[] args){
+     Main obj1=new Main();
+     System.out.println(Main.a+" "+Main.b);
+     
+     Main.b+=3;
+     System.out.println(Main.a+" "+Main.b);
+     
+     Main obj2=new Main();
+     System.out.println(Main.a+" "+Main.b);
+    }
+}
+
+o/p:
+hiii this is static block
+4 20
+4 23
+4 23
