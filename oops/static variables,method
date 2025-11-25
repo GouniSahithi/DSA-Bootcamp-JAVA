@@ -1,0 +1,31 @@
+class Human {
+    int age;
+    String name;
+    int salary;
+    boolean married;
+    static long population;
+
+    public Human(int age, String name, int salary, boolean married) {
+        this.age = age;
+        this.name = name;
+        this.salary = salary;
+        this.married = married;
+        Human.population += 1;
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Human obj1 = new Human(22, "sahi", 100000, false);
+        Human obj2 = new Human(21, "megh", 110000, true);
+
+        System.out.println(obj1.name);
+        System.out.println(obj2.name);
+        System.out.println(Human.population);
+    }
+}
+
+o/p:
+sahi
+megh
+2
