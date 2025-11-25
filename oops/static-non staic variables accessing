@@ -1,0 +1,29 @@
+class Main{
+    public static void main(String[] args){
+        greeting();
+    }
+    void greeting(){
+        System.out.println("hello");
+    }
+}
+
+ERROR!
+/tmp/gF9zKk8bu2/Main.java:3: error: non-static method greeting() cannot be referenced from a static context
+        greeting();
+        ^
+1 error
+ERROR!
+error: compilation failed
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+class Main{
+    public static void main(String[] args){
+        greeting();
+    }
+    static void greeting(){
+        System.out.println("hello");
+    }
+}
+
+o/p:
+hello
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
