@@ -1,0 +1,41 @@
+#######Box.java########
+public class Box{
+  double l;
+  double w;
+  double h;
+  
+  Box(double l,double w,double h){
+    this.l=l;
+    this.w=w;
+    this.h=h;
+  }
+  public void info(){
+    System.out.println("Running this code");
+  }}
+
+########3Boxweight.java###########
+public class Boxweight extends Box{
+double weight;
+public Boxweight(double l,double w,double h,double weight){
+super(l,w,h);
+this.weight=weight;
+}}
+
+########Main.java##########
+public class Main{
+  public static void main(String[] args){
+    Box box1=new Box(2.3,4.5,5.6);
+    System.out.println(box1.l+" "+box1.w+" "+box1.h);
+    Boxweight box2=new Boxweight(2,3,4,5);
+    System.out.println(box2.l+""+box2.w+""+box2.h+""+box2.weight);
+  }
+}
+
+
+
+>>javac Box.java Boxweight.java Main.java
+>>java Main
+o/p:
+2.3 4.5 5.6
+2.03.04.05.0
+
