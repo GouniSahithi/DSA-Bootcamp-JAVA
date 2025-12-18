@@ -1,0 +1,27 @@
+
+##########engineering.java##################
+public class engineering{
+void csebranch(){
+System.out.println("cse is branch in engineering");
+}}
+
+#############cse.java############
+class cse extends engineering{
+void subjects(){
+System.out.println("there are many software related subjects in cse");}}
+
+#############Main1.java#############
+class Main1{
+public static void main(String[] args){
+cse sc=new cse();
+sc.csebranch();
+sc.subjects();}}
+
+
+commands:
+>javac engineering.java cse.java Main1.java
+>java Main1
+
+output:
+cse is branch in engineering
+there are many software related subjects in cse
