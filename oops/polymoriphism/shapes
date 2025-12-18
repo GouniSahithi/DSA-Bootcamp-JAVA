@@ -1,0 +1,29 @@
+public class shapes{
+void area(){
+System.out.println("shapes has area");
+}}
+
+public class circle extends shapes{
+void area(){
+System.out.println("area is pi*r*r");
+}}
+
+public class square extends shapes{
+void area(){
+System.out.println("area is side*side");
+}}
+
+public class Main3{
+public static void main(String[] args){
+shapes shape=new shapes();
+circle cicles=new circle();
+shapes squares=new square();
+squares.area();
+
+}}
+
+commands:>javac shapes.java circle.java square.java Main3.java
+java Main3
+
+o/p:
+area is side*side
