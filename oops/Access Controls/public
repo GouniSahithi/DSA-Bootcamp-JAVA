@@ -1,0 +1,23 @@
+############ A.java ###########
+public class A{
+public int num;
+String name;
+int[] arr;
+public A(int num,String name){
+this.num=num;
+this.name=name;
+this.arr=new int[num];}}
+
+
+################# Main.java ##############33
+
+public class Main{
+public static void main(String[] args){
+A obj=new A(10,"jaaava");
+int n=obj.num;
+System.out.println("Number is:"+n);
+}
+}
+
+output:
+Number is : 10
